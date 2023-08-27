@@ -1,38 +1,118 @@
-.App {
-  text-align: center;
+.navbar {
+  @apply bg-gray-900 flex space-x-1 content-center w-[100%] p-4 text-white shadow-lg hover:text-slate-50
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.navbar-logo {
+  @apply  flex mx-5 text-xl text-slate-50 hover:text-slate-500
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.nav-search {
+  @apply flex mx-80 place-content-center w-[75%] hover:ease-in-out
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.nav-search-input {
+  @apply flex mx-5 w-[30%] min-w-0 rounded border border-solid border-neutral-300 bg-transparent
+  bg-clip-padding px-3 py-[0.25rem] text-slate-500 font-normal leading-[1.6] outline-none transition duration-200
+  hover:border-slate-500 ease-in-out focus:z-[3] focus:border-slate-50
+  focus:text-slate-50 tracking-wide focus:shadow-[inset_0_0_0_1px_rgb(59,113,202)]
+  focus:outline-none motion-reduce:transition-none
 }
 
-.App-link {
-  color: #61dafb;
+.nav-dropdown {
+  @apply flex justify-around mt-1 transition duration-200 text-slate-200 hover:text-slate-500
+  disabled:text-black/30 motion-reduce:transition-none
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.dropdown-ul {
+  @apply absolute block z-[1] rounded-lg border border-2 mt-10 mr-4 w-[13.9%]
+  border-slate-700 bg-slate-200 bg-clip-padding text-left text-base shadow-lg
 }
+
+.dropdown-item {
+  @apply block flex space-x-[3px] w-full text-slate-700 bg-transparent px-1 py-2 text-sm
+  hover:bg-slate-400 hover:rounded-lg
+}
+
+.products-container {
+  @apply flex w-[75%] p-[20px] m-0.5 flex-wrap flex-row place-content-around
+}
+
+.filter-container {
+  @apply flex flex-col p-[20px] w-[20%] m-3 h-[86vh] border shadow-lg bg-slate-300
+}
+
+.filter-container > span {
+  @apply pb-[20px]
+}
+
+.filter-container > span label {
+  @apply m-1
+}
+
+.filter-container > button {
+  @apply rounded-full border active:bg-slate-600 bg-slate-100 hover:text-white hover:bg-slate-500 w-full items-center justify-center hover:shadow-lg  border-2
+}
+
+legend {
+  @apply text-3xl antialiased font-semibold text-center
+}
+
+.rating {
+  @apply flex flex-row
+}
+
+.get-star {
+  @apply ml-1 w-4 h-9 fill-black stroke-black cursor-pointer
+}
+
+.not-get-star {
+  @apply ml-1 w-4 h-9 fill-none stroke-black cursor-pointer
+}
+
+.product {
+  @apply w-80 bg-white hover:scale-[1.03] shadow rounded m-2
+}
+
+.product-top {
+  @apply h-[53.5%] w-full bg-slate-300 flex flex-col p-1 justify-between bg-cover bg-center
+}
+
+.button-product {
+  @apply flex flex-col items-center
+}
+
+.product-dits {
+  @apply p-4 flex flex-col items-center
+}
+
+.product-dits h1 {
+  @apply text-gray-800 text-center mt-1 underline decoration-2 underline-offset-8 decoration-slate-300
+}
+
+.button-add {
+  @apply cursor-pointer rounded-full m-2 py-2 px-4 bg-blue-500 text-white hover:bg-blue-600 active:bg-blue-700 disabled:opacity-50 w-full items-center justify-center disabled:cursor-not-allowed
+}
+
+.button-remove {
+  @apply cursor-pointer m-2 py-2 px-4 bg-red-500 rounded-full text-white hover:bg-red-600 active:bg-red-700 disabled:opacity-50 w-full items-center justify-center
+}
+
+.fast-delivery {
+  @apply rounded-full bg-blue-100 mt-2 px-2 py-1 text-xs font-semibold text-slate-700
+}
+
+.cart-items {
+  @apply bg-slate-300 text-base text-center rounded-lg ml-2 px-[8px] py-[4px] font-semibold text-slate-700
+}
+
+.cart-list {
+  @apply flex flex-row w-[100%] flex-wrap
+}
+
+.cart-list-items {
+  @apply flex flex-initial space-x-2 hover:bg-slate-100 hover:rounded-full mb-5
+}
+
+
+
+
